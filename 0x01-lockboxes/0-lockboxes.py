@@ -12,8 +12,7 @@ def canUnlockAll(boxes):
     """
     if not boxes:
         return False
-    if len(boxes) >= 1 and boxes == [[]]:
-        return True
+
     opened = [False] * len(boxes)
     opened[0] = True
 
