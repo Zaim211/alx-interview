@@ -5,7 +5,7 @@ import sys
 
 # 0 is default value of each key
 status_code = {'200': 0, '301': 0, '400': 0, '401': 0,
-                '403': 0, '404': 0, '405': 0, '500': 0}
+               '403': 0, '404': 0, '405': 0, '500': 0}
 # total_size: to accumulate the total size of the files processed
 total_size = 0
 # Counter used to determine when to print metrics (every 10 lines)
