@@ -12,14 +12,14 @@ def validUTF8(data):
         if byte == 0:
             if x >> 5 == 0b110 or x >> 5 == 0b1110:
                 byte = 1
-            if x >> 4 == 0b1110:
+            elif x >> 4 == 0b1110:
                 byte = 2
-            if x >> 3 == 0b11110:
+            elif x >> 3 == 0b11110:
                 byte = 3
-            if x >> 7 == 0b1:
+            elif x >> 7 == 0b1:
                 return False
         else:
-            if x >> 6 == 0b10:
+            if x >> 6 != 0b10:
                 return False
             byte -= 1
     return byte == 0
