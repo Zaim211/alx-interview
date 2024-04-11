@@ -7,22 +7,22 @@
 import sys
 
 
-def n_queens(N, rows, cols, board):
+def n_queens(N, row, col, board):
     """ Checking the rowon the left side """
-    for x in range(cols):
-        if board[rows][x]:
+    for x in range(col):
+        if board[row][x]:
             return False
     """ checking the diagonal on the lef side """
-    for x, y in zip(range(rows, -1, -1), (cols, -1, -1)):
+    for x, y in zip(range(row, -1, -1), (col, -1, -1)):
         if board[x][y]:
             return False
     """ checking the lower diagonal on the left side """
     return all(not board[x][y] for x, y in
-        zip(range(rows, N), range(cols, -1, -1)))
+        zip(range(row, N), range(col, -1, -1)))
 
-def n_queens_placed(N, board, cols, results):
+def n_queens_placed(N, board, col, results):
     """ checking if are queens are placed and return True """
-    if cols == N:
+    if col == N:
         result = []
         for x in range(N):
             for y in range(N):
@@ -33,10 +33,10 @@ def n_queens_placed(N, board, cols, results):
 
     solu = False
     for x in range(N):
-        if n_queens(board, x, cols, N):
-            board[x][cols] = 1
-            solu = n_queens_placed(N, board, cols + 1, results) or solu
-            board[x][cols] = 0
+        if n_queens(board, x, col, N):
+            board[x][col] = 1
+            solu = n_queens_placed(N, board, col + 1, results) or solu
+            board[x][col] = 0
     return solu
 
 
