@@ -18,7 +18,7 @@ def n_queens(N, rows, cols, board):
             return False
     """ checking the lower diagonal on the left side """
     return all(not board[x][y] for x, y in
-        zip(range(rows, N), range(colss, -1, -1)))
+        zip(range(rows, N), range(cols, -1, -1)))
 
 def n_queens_placed(N, board, cols, results):
     """ checking if are queens are placed and return True """
