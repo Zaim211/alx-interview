@@ -10,7 +10,7 @@ You must use the request module */
 
 const request = require('request');
 const id = process.argv[2];
-const url = "https://swapi-api.alx-tools.com/api/films/" + id;
+const url = 'https://swapi-api.alx-tools.com/api/films/' + id;
 let people = [];
 const names = [];
 
@@ -39,11 +39,11 @@ const GetNames = async () => {
 	    names.push(jsonResponse.name);
             resolve();
           }
-         }));
-     }
-  } else {
-    console.error("Error: no Characters found");
+      }));
     }
+  } else {
+    console.error('Error: no Characters found');
+  }
 };
 
 const ResponseCharNames = async () => {
