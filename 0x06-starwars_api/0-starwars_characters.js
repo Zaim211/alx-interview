@@ -6,7 +6,7 @@ const id = process.argv[2];
 const url = 'https://swapi-api.hbtn.io/api/films/' + id;
 
 let people = [];
-let names = [];
+const names = [];
 
 const filmsEndpoint = async () => {
   await new Promise(resolve => request(url, (err, res, body) => {
