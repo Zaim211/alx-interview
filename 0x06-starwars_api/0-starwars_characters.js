@@ -8,7 +8,7 @@ const url = 'https://swapi-api.alx-tools.com/api/films/' + id;
 let people = [];
 const names = [];
 
-const FilmsEndpoint = async () => {
+const filmsEndpoint = async () => {
   await new Promise((resolve) => request(url, (err, res, body) => {
     if (err || res.statusCode != 200) {
       console.log('Error: ', err, 'StatusCode: ', res.statusCode);
@@ -20,7 +20,7 @@ const FilmsEndpoint = async () => {
   }));
 };
 
-const GetNames = async () => {
+const getNames = async () => {
   if (people.length > 0) {
     for (const i of people) {
       await new Promise((resolve) => request(i, (err, res, body) => {
@@ -38,9 +38,9 @@ const GetNames = async () => {
   }
 };
 
-const ResponseCharNames = async () => {
-  await FilmsEndpoint();
-  await GetNames();
+const responseCharNames = async () => {
+  await filmsEndpoint();
+  await getNames();
   for (const name of names) {
     if (name === names[names.length - 1]) {
       process.stdout.write(name);
@@ -50,4 +50,4 @@ const ResponseCharNames = async () => {
   }
 };
 
-ResponseCharNames();
+responseCharNames();
