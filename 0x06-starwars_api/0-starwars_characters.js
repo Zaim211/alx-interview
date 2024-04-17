@@ -9,7 +9,7 @@ You must use the Star wars API
 You must use the request module */
 
 const request = require('request');
-const id = process.argv[2]
+const id = process.argv[2];
 const url = "https://swapi-api.alx-tools.com/api/films/" + id;
 let people = [];
 const names = [];
@@ -24,8 +24,7 @@ const FilmsEndpoint = async () => {
          people = jsonResponse.characters;
          resolve();
       }
-    })
-  );
+    }));
 };
 
 const GetNames = async () => {
