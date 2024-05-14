@@ -6,13 +6,18 @@ def Prime_numbers(n):
     """ Function that check the numbers is Prime
     with given n.
     """
-    if n == 1 or n == 0 or (n % 2 == 0 and n > 2):
+    if n == 1 or n == 0:
         return False
+    elif n % 2 == 0:
+        return False
+    elif n == 2:
+        return True
     else:
-        for nums in range(3, int(n ** 0.5) + 1), 2):
+        for nums in range(3, int(n ** 0.5) + 1, 2):
             if n % nums == 0:
                 return False
         return True
+
 
 def RoundWinner_game(n, x):
     """ Fucntion that find the round winner """
@@ -40,6 +45,7 @@ def RoundWinner_game(n, x):
             for idx, val in enumerate(index):
                 del list[val - idx]
     return None
+
 
 def isWinner(x, nums):
     """ Function that find the winner of game """
