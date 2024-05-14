@@ -9,7 +9,7 @@ def Prime_numbers(n):
     if n == 1 or n == 0 or (n % 2 == 0 and n > 2):
         return False
     else:
-        for nums in range(3, int(n ** 0.5) + 1, 2):
+        for nums in range(3, int(n**(1/2)) + 1, 2):
             if n % nums == 0:
                 return False
         return True
