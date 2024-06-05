@@ -1,49 +1,34 @@
-Minimum Operations:
+# Minimum Operations Problem
 
-In a text file, there is a single character H. Your text editor can execute only two operations in this file: Copy All and Paste. Given a number n, write a method that calculates the fewest number of operations needed to result in exactly n H characters in the file.
+## Problem Description:
 
-Prototype: def minOperations(n)
-Returns an integer
-If n is impossible to achieve, return 0
-Example:
+The Minimum Operations problem involves determining the fewest number of operations required to achieve a specific configuration of characters in a text file. In this particular scenario, the text file initially contains a single character 'H', and the only operations allowed are "Copy All" and "Paste". The goal is to calculate the minimum number of operations needed to result in exactly `n` occurrences of the character 'H' in the file.
 
-n = 9
+### Example:
 
-H => Copy All => Paste => HH => Paste =>HHH => Copy All => Paste => HHHHHH => Paste => HHHHHHHHH
+For example, given `n = 9`, the initial state is 'H'. The following sequence of operations achieves the desired configuration:
+1. Copy All
+2. Paste (resulting in 'HH')
+3. Paste (resulting in 'HHH')
+4. Copy All
+5. Paste (resulting in 'HHHHHH')
+6. Paste (resulting in 'HHHHHHHHH')
 
-Number of operations: 6
+Thus, the minimum number of operations required is 6.
 
-Solution(explication):
+## Method Signature:
 
-Initialization:
+```python
+def minOperations(n: int) -> int:
+    """
+    Calculates the fewest number of operations needed to result in exactly n H characters in the file.
 
-ope is initially 0.
-i starts from 2.
-Loop Iteration 1:
+    Args:
+        n (int): The desired number of H characters in the file.
 
-i = 2: Since 9 % 2 != 0, 2 is not a factor of 9.
-No change in ope or n.
-i becomes 3.
-Loop Iteration 2:
+    Returns:
+        int: The minimum number of operations required. If n is impossible to achieve, return 0.
+    """
+```
 
-i = 3: Since 9 % 3 == 0, 3 is a factor of 9.
-ope += i increments ope by 3, making ope = 3.
-n //= i updates n to 3.
-i becomes 1.
-Loop Iteration 3:
-
-i = 2: Since 3 % 2 != 0, 2 is not a factor of 3.
-No change in ope or n.
-i becomes 3.
-Loop Iteration 4:
-
-i = 3: Since 3 % 3 == 0, 3 is a factor of 3.
-ope += i increments ope by 3, making ope = 6.
-n //= i updates n to 1.
-i becomes 1.
-End of Loop:
-
-Since i > n, the loop ends.
-Result:
-
-The minimum number of operations (ope) required to reach n = 9 characters is 6.
+---
