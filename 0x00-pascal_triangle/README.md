@@ -1,40 +1,32 @@
-Pascal's Triangle
-###
-Create a function def pascal_triangle(n): that returns a list of lists of integers representing the Pascal’s triangle of n:
-###
-Returns an empty list if n <= 0
-You can assume n will be always an integer
-###
- cat 0-main.py
- ###
-#!/usr/bin/python3
-###
-"""
-0-main
-"""
-###
-pascal_triangle = __import__('0-pascal_triangle').pascal_triangle
-###
+# Exploring Pascal's Triangle: A Mathematical Marvel
 
-    def print_triangle(triangle):
-    """
-    Print the triangle
-    """
-    for row in triangle:
-        print("[{}]".format(",".join([str(x) for x in row])))
-###
+In order to programmatically generate Pascal's triangle, let's delve into this fascinating mathematical entity. Pascal's triangle is a mesmerizing geometric arrangement of numbers that holds numerous intriguing properties. Named after the French mathematician Blaise Pascal, this triangle has been a subject of fascination and study for centuries.
 
-    if __name__ == "__main__":
-    print_triangle(pascal_triangle(5))
-###
-./0-main.py
-###
-[1]
-###
-[1,1]
-###
-[1,2,1]
-###
-[1,3,3,1]
-###
-[1,4,6,4,1]
+## What Makes Pascal's Triangle Great?
+
+### 1. Infinite Structure
+Pascal's triangle is an infinite triangular array of numbers arranged in such a way that each number is the sum of the two numbers directly above it. This infinite structure makes it a captivating object of study in combinatorics and number theory.
+
+### 2. Binomial Coefficients
+The numbers in Pascal's triangle represent binomial coefficients, also known as "choose" coefficients. These coefficients arise in combinatorial mathematics and have applications in various fields such as probability theory, algebra, and calculus.
+
+### 3. Symmetry and Patterns
+Pascal's triangle exhibits numerous symmetrical and pattern-based properties. From the symmetry along the center diagonal to the various geometric patterns formed by consecutive numbers, exploring these symmetries and patterns can be both intriguing and mind-blowing.
+
+### 4. Connection to Pascal's Identity
+Pascal's triangle is intimately connected to Pascal's identity, a mathematical formula expressing the relationship between binomial coefficients. This identity has significant implications in algebraic manipulation and problem-solving.
+
+### 5. Applications in Mathematics and Beyond
+Beyond its inherent mathematical beauty, Pascal's triangle finds applications in various fields, including cryptography, probability theory, and computer science. Its versatility and richness make it a fundamental concept in mathematics and beyond.
+
+## Example of Pascal's Triangle
+
+Here's an example of Pascal's triangle with the first 5 rows:
+
+```
+      1
+     1 1
+    1 2 1
+   1 3 3 1
+  1 4 6 4 1
+```
