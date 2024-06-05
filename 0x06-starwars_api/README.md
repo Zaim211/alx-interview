@@ -1,12 +1,26 @@
-0. Star Wars Characters
-mandatory
-Write a script that prints all characters of a Star Wars movie:
+# Star Wars Movie Character Printer
 
-The first positional argument passed is the Movie ID - example: 3 = “Return of the Jedi”
-Display one character name per line in the same order as the “characters” list in the /films/ endpoint
-You must use the Star wars API
-You must use the request module
-alexa@ubuntu:~/0x06$ ./0-starwars_characters.js 3
+Hey there! So, I've got this cool task where I need to write a script in JavaScript that fetches and prints all the characters from a specific Star Wars movie using the Star Wars API.
+
+## Usage
+
+To run our script, we just need to fire up our terminal and type:
+
+```
+node starwars_characters.js <Movie_ID>
+```
+
+Replace `<Movie_ID>` with the ID of the Star Wars movie we're interested in. For example:
+
+```
+node starwars_characters.js 3
+```
+
+## Output Example
+
+Here's what we'll get when we run the script with a movie ID:
+
+```
 Luke Skywalker
 C-3PO
 R2-D2
@@ -27,3 +41,4 @@ Arvel Crynyd
 Wicket Systri Warrick
 Nien Nunb
 Bib Fortuna
+```
