@@ -1,27 +1,35 @@
-0. Rotate 2D Matrix
+# Rotate 2D Matrix
 
-Given an n x n 2D matrix, rotate it 90 degrees clockwise.
+## Introduction
+Welcome to the Rotate 2D Matrix task! This problem is an exciting challenge that allows us to dive into the world of matrices and rotations. As a software engineering student, I am thrilled to tackle this problem head-on and demonstrate the power of Python.
 
-Prototype: def rotate_2d_matrix(matrix):
-Do not return anything. The matrix must be edited in-place.
-You can assume the matrix will have 2 dimensions and will not be empty.
-jessevhedden$ cat main_0.py
-#!/usr/bin/python3
-"""
-Test 0x07 - Rotate 2D Matrix
-"""
-rotate_2d_matrix = __import__('0-rotate_2d_matrix').rotate_2d_matrix
+## Problem Statement
+The task at hand is to rotate an n x n 2D matrix 90 degrees clockwise, with the rotation being performed in-place. This means we won't be creating a new matrix but rather modifying the existing one.
 
-if __name__ == "__main__":
-    matrix = [[1, 2, 3],
-              [4, 5, 6],
-              [7, 8, 9]]
+## Approach
+To accomplish this task, we need to understand the concept of transposing a matrix and then reversing each row. Transposing a matrix involves swapping its rows and columns. In our case, transposing the matrix will prepare it for the clockwise rotation. After transposing, we reverse each row to achieve the desired rotation.
 
-    rotate_2d_matrix(matrix)
-    print(matrix)
+## Implementation
+Our function `rotate_2d_matrix(matrix)` will take the given matrix as input and rotate it in place. We won't return anything from the function, as the matrix will be modified directly. The provided prototype is:
 
-jessevhedden$
-jessevhedden$ ./main_0.py
+```python
+def rotate_2d_matrix(matrix):
+    # Implementation goes here
+```
+
+## Example
+Let's illustrate the task with an example:
+
+Given matrix:
+```
+[[1, 2, 3],
+ [4, 5, 6],
+ [7, 8, 9]]
+```
+
+After rotating it 90 degrees clockwise, the expected output should be:
+```
 [[7, 4, 1],
-[8, 5, 2],
-[9, 6, 3]]
+ [8, 5, 2],
+ [9, 6, 3]]
+```
