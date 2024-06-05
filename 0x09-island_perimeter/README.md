@@ -1,31 +1,43 @@
-Create a function def island_perimeter(grid): that returns the perimeter of the island described in grid:
+# Island Perimeter Solver
 
-grid is a list of list of integers:
-0 represents water
-1 represents land
-Each cell is square, with a side length of 1
-Cells are connected horizontally/vertically (not diagonally).
-grid is rectangular, with its width and height not exceeding 100
-The grid is completely surrounded by water
-There is only one island (or nothing).
-The island doesn’t have “lakes” (water inside that isn’t connected to the water surrounding the island).
-guillaume@ubuntu:~/0x09$ cat 0-main.py
-#!/usr/bin/python3
-"""
-0-main
-"""
-island_perimeter = __import__('0-island_perimeter').island_perimeter
+Welcome aboard the Island Perimeter Solver! 🏝️
 
-if __name__ == "__main__":
-    grid = [
-        [0, 0, 0, 0, 0, 0],
-        [0, 1, 0, 0, 0, 0],
-        [0, 1, 0, 0, 0, 0],
-        [0, 1, 1, 1, 0, 0],
-        [0, 0, 0, 0, 0, 0]
-    ]
-    print(island_perimeter(grid))
+Alright, time to dive into this island perimeter mystery! Today's challenge is not for the faint of heart, but fear not, because I'm about to embark on a coding adventure that'll leave me feeling like a coding rockstar!
 
-guillaume@ubuntu:~/0x09$ 
-guillaume@ubuntu:~/0x09$ ./0-main.py
-12
+## My Mission
+
+Here's the deal: I've got a mission, and you better believe I'm accepting it! My job is to crack open this grid and uncover the secrets of the island's perimeter. That's right, I'm talking about writing a function called `island_perimeter(grid)` that'll boldly navigate through the twists and turns of the grid, calculating the perimeter of this elusive island.
+
+### Grid Specifications:
+- So, here's the deal with the grid: it's my treasure map, a list of lists of integers.
+- Each cell in this grid is either water (0) or land (1).
+- The grid is like a puzzle, completely surrounded by water, waiting for me to solve it.
+- There's only one island here, no tricks or traps.
+- This island doesn't mess around; it's all connected horizontally or vertically. Diagonals need not apply!
+- Watch out for lakes! But no worries, this island is lake-free.
+
+## Example
+
+Imagine this: a grid lies before me, its secrets waiting to be uncovered:
+
+```python
+grid = [
+    [0, 0, 0, 0, 0, 0],
+    [0, 1, 0, 0, 0, 0],
+    [0, 1, 0, 0, 0, 0],
+    [0, 1, 1, 1, 0, 0],
+    [0, 0, 0, 0, 0, 0]
+]
+```
+
+With my coding prowess, I'll reveal the truth: the perimeter of this island is `12` units. Get ready to witness the power of my code as it unravels the mysteries of the grid!
+
+## Getting Started
+
+Alright, let's get this show on the road! Time to gear up and dive headfirst into the world of Python. I'll create the `0-island_perimeter.py` file and unleash my coding superpowers to implement the `island_perimeter(grid)` function.
+
+Once I've got my solution locked and loaded, it's go time! I'll fire up the `main.py` script to put it to the ultimate test.
+
+```bash
+$ python3 main.py
+```
